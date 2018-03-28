@@ -25,7 +25,7 @@ Person::Person(int initialAge) {
 }
 
 void Person::yearPasses() {
-	++age; 
+	++this->age; 
 	
 	return; 
 }
