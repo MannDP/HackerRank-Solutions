@@ -3,9 +3,9 @@
 # include <stdlib.h> 
 
 using namespace std; 
-void printInReverse (const float[], const int); 
-void populateDataset (string, int[], int); 
+void printInReverse (const int[], const int); 
 void printArray (const int[], const int); 
+void populateArray(int[], const int, const string); 
 
 int main() {
 	int size; 
@@ -22,34 +22,41 @@ int main() {
 	*/
 
 	int dataset[size]; 
-
-	populateDataset(mystring, dataset, size); 
-	printArray(dataset, size); 
+	populateArray(dataset, size, mystring); 
+	//printArray (dataset, size); 
+	
+	printInReverse(dataset, size); 
 
 	return 0; 
 }
 
-void populateDataset(const string foo, int dataset[], const int size) {
-	int count = 1; 
+void populateArray (int dataset[], const int size, const string foo) {
+	
+	int index_count = 0;
+
 
 	for (int i = 0; i < size*2; i+=2) {
-		dataset[count - 1] = foo[i]; 
-		++count; 
+		dataset[index_count] = foo[i] - 48; 
+		//cout << "the value of mystring at this index is: " << foo[i] << endl; 
+		//cout << "the value assigned to the dataset at this index: " << index_count << ", is " << dataset[index_count] << endl;
+		++index_count; 
+		//cout << endl; 
 	}
 
 	return; 
 }
 
-void printInReverse (const float array[], const int size) {
-	for (int m = (size - 1); m > 0; m--)
+void printInReverse (const int array[], const int size) {
+	for (int m = (size - 1); m >= 0; m--)
 		cout << array[m] << " "; 
 
 	return;
 }
 
 void printArray (const int dataset[], const int size) {
-	for (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++) {
 		cout << dataset[i] << endl; 
-
+	}
+	 
 	return; 
 }
