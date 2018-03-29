@@ -37,10 +37,10 @@ void populateArray (int dataset[], const int size, const string foo) {
 
 	for (int i = 0; i < size*2; i+=2) {
 		dataset[index_count] = foo[i] - 48; 
-		//cout << "the value of mystring at this index is: " << foo[i] << endl; 
-		//cout << "the value assigned to the dataset at this index: " << index_count << ", is " << dataset[index_count] << endl;
+		cout << "the value of mystring at this index is: " << foo[i] << endl; 
+		cout << "the value assigned to the dataset at this index: " << index_count << ", is " << dataset[index_count] << endl;
 		++index_count; 
-		//cout << endl; 
+		cout << endl; 
 	}
 
 	return; 
