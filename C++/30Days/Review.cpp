@@ -60,5 +60,7 @@ void print_function (string input) {
     	++index_counter; 
     }
 
+    cout << endl; 
+
     return; 
 }
