@@ -1,8 +1,6 @@
-#include <cmath>
-#include <cstdio>
 #include <vector>
 #include <iostream>
-#include <algorithm>
+#include <string> 
 using namespace std;
 
 void print_function (string input); 
@@ -12,9 +10,18 @@ int main() {
     int t; 
     cin >> t; 
 
+    vector <string> stringArray; 
+
     for (int i = 0; i < t; i++) {
     	string input; 
     	cin >> input; 
+
+      stringArray.push_back(input); 
+    }
+
+    for (int i = 0; i < t; i++) {
+      string tmp = stringArray[i];
+      print_function(tmp); 
     }
 
     return 0;
@@ -59,6 +66,8 @@ void print_function (string input) {
    		cout << input[m]; 
     	++index_counter; 
     }
+
+    cout << endl; 
 
     return; 
 }
